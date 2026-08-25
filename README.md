@@ -1,2 +1,3 @@
-# FakeCurrency.github.io
-4 Civil Solutions proposed website
+# 4 Civil Solutions preview
+
+Live: https://fakecurrency.github.io/
