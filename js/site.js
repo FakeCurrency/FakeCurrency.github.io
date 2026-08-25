@@ -12,8 +12,6 @@
       .btn{min-height:44px;-webkit-tap-highlight-color:transparent}
       input,textarea{font-size:16px}
       .brand-logo{height:64px;width:auto;display:block}
-      .footer-logo{height:48px;width:auto;display:block}
-      .network-band{background:#0b0b0b;color:#fff}
       .cta-people{display:flex;align-items:center;gap:28px 40px;flex-wrap:wrap}
       .cta-person{display:flex;align-items:center;gap:16px}
       .cta-person img{width:88px;height:88px;object-fit:cover;border-radius:50%;flex:0 0 auto}
@@ -22,42 +20,30 @@
         .header-inner{padding:10px 16px;gap:12px}
         .brand-logo{height:46px!important}
         .nav,.phone{display:none}
-        .nav.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#f4f1eb;padding:8px 16px 20px;border-bottom:1px solid rgba(18,18,18,.12);align-items:stretch;gap:0;z-index:60}
-        .nav.open a{padding:14px 4px;font-size:18px;min-height:48px;display:flex;align-items:center;border-bottom:1px solid rgba(18,18,18,.12)}
+        .nav.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#f4f1eb;padding:8px 16px 20px;z-index:60}
+        .nav.open a{padding:14px 4px;font-size:18px;min-height:48px;display:flex;align-items:center}
         .menu-toggle{display:block;width:44px;height:44px}
         .stats{grid-template-columns:1fr 1fr!important}
         .jobs{grid-template-columns:1fr 1fr!important}
-        .services,.split,.work-grid,.trust,.section-head,.service-detail,.plant,.contact-grid,.form-row,.cred-grid,.tick-grid{grid-template-columns:1fr!important}
-        .hero{min-height:78vh}
-        .hero-copy{padding:0 20px 36px}
-        .hero h1{font-size:clamp(32px,10vw,48px)!important;max-width:14ch}
+        .split,.work-grid,.trust,.section-head,.contact-grid,.form-row,.cred-grid{grid-template-columns:1fr!important}
+        .hero h1{font-size:clamp(32px,10vw,48px)!important}
         .cta-band{flex-direction:column;align-items:stretch;margin:0 12px 36px;padding:28px 20px}
         .cta-people{flex-direction:column;align-items:stretch;gap:18px}
-        .cta-person{width:100%}
         .cta-person .btn{width:100%}
-        .cta-person img{width:72px;height:72px}
         .section{padding:56px 16px}
-        .page-hero{padding:48px 16px 24px}
-        .contact-grid{padding:12px 16px 64px;gap:28px}
-        .split{min-height:0;grid-template-columns:1fr!important}
-        .split-copy{padding:32px 20px}
-        .network-inner{padding:28px 16px 32px!important}
-        .network-row{gap:20px!important;-webkit-overflow-scrolling:touch}
+        .split{grid-template-columns:1fr!important}
         .network-row img{height:40px!important}
-        .site-footer{flex-wrap:wrap;padding:24px 16px}
-        h2{font-size:clamp(28px,8vw,42px)}
       }
       @media (max-width:480px){
         .header-actions .btn{display:none}
         .jobs{grid-template-columns:1fr!important}
-        .hero{min-height:70vh}
       }
     `;
     document.head.appendChild(style);
   }
 
   const header = `
-    <div class="preview-bar">Proposed website &nbsp;·&nbsp; <strong>4 Civil Solutions</strong> &nbsp;·&nbsp; Preview 09 · phone ready</div>
+    <div class="preview-bar">Proposed website &nbsp;·&nbsp; <strong>4 Civil Solutions</strong> &nbsp;·&nbsp; Preview 10</div>
     <header class="site-header">
       <div class="header-inner">
         <a class="brand-lockup" href="index.html" aria-label="4 Civil Solutions">
@@ -107,11 +93,9 @@
   const mountFooter = document.getElementById("site-footer");
   if (mountHeader) mountHeader.outerHTML = header;
   if (mountFooter) mountFooter.outerHTML = footer;
-
   const btn = document.getElementById("menuBtn");
   const nav = document.getElementById("nav");
   if (btn && nav) btn.addEventListener("click", function () { nav.classList.toggle("open"); });
-
   const form = document.getElementById("enquiry-form");
   if (form) {
     form.addEventListener("submit", function (e) {
@@ -119,12 +103,8 @@
       const name = (form.querySelector('[name="first"]').value + " " + form.querySelector('[name="last"]').value).trim();
       const from = form.querySelector('[name="email"]').value;
       const message = form.querySelector('[name="message"]').value;
-      const subject = encodeURIComponent("Website enquiry — 4 Civil Solutions");
-      const body = encodeURIComponent(`Name: ${name}\nEmail: ${from}\n\n${message}`);
-      window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+      window.location.href = "mailto:" + email + "?subject=" + encodeURIComponent("Website enquiry — 4 Civil Solutions") + "&body=" + encodeURIComponent("Name: " + name + "\nEmail: " + from + "\n\n" + message);
       form.reset();
-      const note = document.getElementById("form-status");
-      if (note) note.textContent = "Your email app should open. If it does not, call directly.";
     });
   }
 })();
