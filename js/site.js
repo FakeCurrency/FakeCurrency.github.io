@@ -14,16 +14,20 @@
       .network-kicker{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.55);text-align:center;margin-bottom:24px}
       .network-row{display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:28px;overflow-x:auto}
       .network-row img{height:56px;width:auto;max-width:none;flex:0 0 auto;object-fit:contain}
+      .cta-person{display:flex;align-items:center;gap:22px;min-width:0}
+      .cta-person img{width:96px;height:96px;object-fit:cover;border-radius:50%;flex:0 0 auto}
+      .cta-person p{margin-top:8px;font-size:16px;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.72)}
       @media (max-width:900px){
         .brand-logo{height:52px}
         .network-row img{height:44px}
+        .cta-person img{width:80px;height:80px}
       }
     `;
     document.head.appendChild(style);
   }
 
   const header = `
-    <div class="preview-bar">Proposed website &nbsp;·&nbsp; <strong>4 Civil Solutions</strong> &nbsp;·&nbsp; Preview 06</div>
+    <div class="preview-bar">Proposed website &nbsp;·&nbsp; <strong>4 Civil Solutions</strong> &nbsp;·&nbsp; Preview 07</div>
     <header class="site-header">
       <div class="header-inner">
         <a class="brand-lockup" href="index.html" aria-label="4 Civil Solutions">
@@ -93,7 +97,7 @@
       window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
       form.reset();
       const note = document.getElementById("form-status");
-      if (note) note.textContent = "Your email app should open. If it does not, call Christian directly.";
+      if (note) note.textContent = "Your email app should open. If it does not, call directly.";
     });
   }
 })();
