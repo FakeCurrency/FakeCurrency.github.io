@@ -9,23 +9,21 @@
     style.textContent = `
       .brand-logo{height:64px;width:auto;display:block}
       .footer-logo{height:48px;width:auto;display:block}
-      .hero h1{font-size:clamp(40px,6vw,84px)!important;max-width:16ch;line-height:.94}
       .network-band{background:#0b0b0b;color:#fff}
-      .network-inner{max-width:1440px;margin:0 auto;padding:56px 40px}
-      .network-kicker{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.55);text-align:center;margin-bottom:32px}
-      .network-row{display:flex;align-items:center;justify-content:space-between;gap:32px 48px;flex-wrap:wrap}
-      .network-row img{height:88px;width:auto;max-width:200px;object-fit:contain}
+      .network-inner{max-width:1440px;margin:0 auto;padding:36px 32px 44px}
+      .network-kicker{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.55);text-align:center;margin-bottom:24px}
+      .network-row{display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:28px;overflow-x:auto}
+      .network-row img{height:56px;width:auto;max-width:none;flex:0 0 auto;object-fit:contain}
       @media (max-width:900px){
         .brand-logo{height:52px}
-        .network-row{justify-content:center}
-        .network-row img{height:64px}
+        .network-row img{height:44px}
       }
     `;
     document.head.appendChild(style);
   }
 
   const header = `
-    <div class="preview-bar">Proposed website &nbsp;·&nbsp; <strong>4 Civil Solutions</strong> &nbsp;·&nbsp; Preview 05</div>
+    <div class="preview-bar">Proposed website &nbsp;·&nbsp; <strong>4 Civil Solutions</strong> &nbsp;·&nbsp; Preview 06</div>
     <header class="site-header">
       <div class="header-inner">
         <a class="brand-lockup" href="index.html" aria-label="4 Civil Solutions">
@@ -46,15 +44,15 @@
   `;
 
   const networks = document.getElementById("networks") ? "" : `
-    <section class="network-band" aria-label="Affiliations">
-      <div class="network-inner">
-        <div class="network-kicker">Affiliations</div>
-        <div class="network-row">
-          <img src="https://4civil.com.au/wp-content/uploads/2021/10/citywide-1.png" alt="Citywide" />
-          <img src="https://4civil.com.au/wp-content/uploads/2021/10/citipower.png" alt="CitiPower" />
-          <img src="https://4civil.com.au/wp-content/uploads/2021/10/powercor.png" alt="Powercor Australia" />
-          <img src="https://4civil.com.au/wp-content/uploads/2021/10/spausnet.png" alt="SP AusNet" />
-          <img src="https://4civil.com.au/wp-content/uploads/2021/10/jemena.png" alt="Jemena" />
+    <section class="network-band" aria-label="Affiliations" style="background:#0b0b0b;color:#fff">
+      <div class="network-inner" style="max-width:1440px;margin:0 auto;padding:36px 32px 44px">
+        <div class="network-kicker" style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.55);text-align:center;margin-bottom:24px">Affiliations</div>
+        <div class="network-row" style="display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:28px;overflow-x:auto">
+          <img src="https://4civil.com.au/wp-content/uploads/2021/10/citywide-1.png" alt="Citywide" style="height:56px;width:auto;max-width:none;flex:0 0 auto;display:block;object-fit:contain" />
+          <img src="https://4civil.com.au/wp-content/uploads/2021/10/citipower.png" alt="CitiPower" style="height:56px;width:auto;max-width:none;flex:0 0 auto;display:block;object-fit:contain" />
+          <img src="https://4civil.com.au/wp-content/uploads/2021/10/powercor.png" alt="Powercor Australia" style="height:72px;width:auto;max-width:none;flex:0 0 auto;display:block;object-fit:contain" />
+          <img src="https://4civil.com.au/wp-content/uploads/2021/10/spausnet.png" alt="SP AusNet" style="height:48px;width:auto;max-width:none;flex:0 0 auto;display:block;object-fit:contain" />
+          <img src="https://4civil.com.au/wp-content/uploads/2021/10/jemena.png" alt="Jemena" style="height:56px;width:auto;max-width:none;flex:0 0 auto;display:block;object-fit:contain" />
         </div>
       </div>
     </section>`;
