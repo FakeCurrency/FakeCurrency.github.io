@@ -14,20 +14,23 @@
       .network-kicker{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.55);text-align:center;margin-bottom:24px}
       .network-row{display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:28px;overflow-x:auto}
       .network-row img{height:56px;width:auto;max-width:none;flex:0 0 auto;object-fit:contain}
-      .cta-person{display:flex;align-items:center;gap:22px;min-width:0}
-      .cta-person img{width:96px;height:96px;object-fit:cover;border-radius:50%;flex:0 0 auto}
-      .cta-person p{margin-top:8px;font-size:16px;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+      .cta-people{display:flex;align-items:center;gap:28px 40px;flex-wrap:wrap}
+      .cta-person{display:flex;align-items:center;gap:16px}
+      .cta-person img{width:88px;height:88px;object-fit:cover;border-radius:50%;flex:0 0 auto}
+      .cta-person p{margin:0 0 10px;font-size:15px;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.78)}
+      .contact-card .cta-people{flex-direction:column;align-items:flex-start;gap:20px}
+      .contact-card .cta-person img{width:72px;height:72px}
       @media (max-width:900px){
         .brand-logo{height:52px}
         .network-row img{height:44px}
-        .cta-person img{width:80px;height:80px}
+        .cta-person img{width:72px;height:72px}
       }
     `;
     document.head.appendChild(style);
   }
 
   const header = `
-    <div class="preview-bar">Proposed website &nbsp;·&nbsp; <strong>4 Civil Solutions</strong> &nbsp;·&nbsp; Preview 07</div>
+    <div class="preview-bar">Proposed website &nbsp;·&nbsp; <strong>4 Civil Solutions</strong> &nbsp;·&nbsp; Preview 08</div>
     <header class="site-header">
       <div class="header-inner">
         <a class="brand-lockup" href="index.html" aria-label="4 Civil Solutions">
@@ -79,11 +82,7 @@
 
   const btn = document.getElementById("menuBtn");
   const nav = document.getElementById("nav");
-  if (btn && nav) {
-    btn.addEventListener("click", function () {
-      nav.classList.toggle("open");
-    });
-  }
+  if (btn && nav) btn.addEventListener("click", function () { nav.classList.toggle("open"); });
 
   const form = document.getElementById("enquiry-form");
   if (form) {
