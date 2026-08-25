@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — 4 Civil Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;560;650&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="contact">
+  <div id="site-header"></div>
+  <header class="page-hero">
+    <div class="kicker">Contact</div>
+    <h1>Start with a call.</h1>
+    <p>For scopes, start dates and site access, speak to Christian. The form is there if email is easier.</p>
+  </header>
+  <section class="contact-grid">
+    <aside class="contact-card">
+      <h2>Christian</h2>
+      <a href="tel:+61407818918">0407 818 918</a>
+      <a href="mailto:christian@4civil.com.au">christian@4civil.com.au</a>
+      <p>Melbourne and surrounds. VEDN civil, excavation, pipe, haul, drill and reinstatement.</p>
+      <p>We reply within a day. If it is urgent, call.</p>
+    </aside>
+    <form id="enquiry-form">
+      <div class="form-row">
+        <div><label for="first">First name</label><input id="first" name="first" required /></div>
+        <div><label for="last">Last name</label><input id="last" name="last" required /></div>
+      </div>
+      <div><label for="email">Email</label><input id="email" name="email" type="email" required /></div>
+      <div><label for="message">About the work</label><textarea id="message" name="message" required placeholder="Location, service, timing."></textarea></div>
+      <button class="btn" type="submit">Send</button>
+      <p class="form-note" id="form-status">Opens your email to christian@4civil.com.au.</p>
+    </form>
+  </section>
+  <div id="site-footer"></div>
+  <script src="js/site.js"></script>
+</body>
+</html>
