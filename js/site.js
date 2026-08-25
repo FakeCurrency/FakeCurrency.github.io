@@ -7,26 +7,25 @@
     const style = document.createElement("style");
     style.id = "preview04-css";
     style.textContent = `
-      .brand-logo{height:78px;width:auto;display:block}
-      .footer-logo{height:52px;width:auto;display:block}
-      .hero-logo{height:clamp(80px,14vw,140px);width:auto;display:block;filter:drop-shadow(0 8px 24px rgba(0,0,0,.35))}
-      .hero-brand{margin:0}
+      .brand-logo{height:64px;width:auto;display:block}
+      .footer-logo{height:48px;width:auto;display:block}
+      .hero h1{font-size:clamp(40px,6vw,84px)!important;max-width:16ch;line-height:.94}
       .network-band{background:#0b0b0b;color:#fff}
-      .network-inner{max-width:1440px;margin:0 auto;padding:48px 28px 56px}
-      .network-kicker{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.55);text-align:center;margin-bottom:28px}
-      .network-row{display:flex;align-items:center;justify-content:space-between;gap:28px 36px;flex-wrap:wrap}
-      .network-row img{height:64px;width:auto;max-width:160px;object-fit:contain}
+      .network-inner{max-width:1440px;margin:0 auto;padding:56px 40px}
+      .network-kicker{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.55);text-align:center;margin-bottom:32px}
+      .network-row{display:flex;align-items:center;justify-content:space-between;gap:32px 48px;flex-wrap:wrap}
+      .network-row img{height:88px;width:auto;max-width:200px;object-fit:contain}
       @media (max-width:900px){
-        .brand-logo{height:58px}
+        .brand-logo{height:52px}
         .network-row{justify-content:center}
-        .network-row img{height:52px}
+        .network-row img{height:64px}
       }
     `;
     document.head.appendChild(style);
   }
 
   const header = `
-    <div class="preview-bar">Proposed website &nbsp;·&nbsp; <strong>4 Civil Solutions</strong> &nbsp;·&nbsp; Preview 04</div>
+    <div class="preview-bar">Proposed website &nbsp;·&nbsp; <strong>4 Civil Solutions</strong> &nbsp;·&nbsp; Preview 05</div>
     <header class="site-header">
       <div class="header-inner">
         <a class="brand-lockup" href="index.html" aria-label="4 Civil Solutions">
@@ -46,10 +45,10 @@
     </header>
   `;
 
-  const footer = `
-    <section class="network-band" aria-label="Victorian networks">
+  const networks = document.getElementById("networks") ? "" : `
+    <section class="network-band" aria-label="Affiliations">
       <div class="network-inner">
-        <div class="network-kicker">Victorian networks</div>
+        <div class="network-kicker">Affiliations</div>
         <div class="network-row">
           <img src="https://4civil.com.au/wp-content/uploads/2021/10/citywide-1.png" alt="Citywide" />
           <img src="https://4civil.com.au/wp-content/uploads/2021/10/citipower.png" alt="CitiPower" />
@@ -58,7 +57,10 @@
           <img src="https://4civil.com.au/wp-content/uploads/2021/10/jemena.png" alt="Jemena" />
         </div>
       </div>
-    </section>
+    </section>`;
+
+  const footer = `
+    ${networks}
     <footer class="site-footer">
       <a class="footer-brand" href="index.html" aria-label="4 Civil Solutions">
         <img class="footer-logo" src="https://4civil.com.au/wp-content/uploads/2021/10/4civiltransmall.png" alt="4 Civil Solutions" width="300" height="110" />
