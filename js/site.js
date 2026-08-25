@@ -4,11 +4,11 @@
   const page = document.body.dataset.page || "home";
 
   const header = `
-    <div class="preview-bar">Proposed website &nbsp;·&nbsp; <strong>4 Civil Solutions</strong> &nbsp;·&nbsp; Preview 03</div>
+    <div class="preview-bar">Proposed website &nbsp;·&nbsp; <strong>4 Civil Solutions</strong> &nbsp;·&nbsp; Preview 04</div>
     <header class="site-header">
       <div class="header-inner">
         <a class="brand-lockup" href="index.html" aria-label="4 Civil Solutions">
-          <img class="brand-logo" src="images/logo.png" alt="4 Civil Solutions" width="300" height="110" onerror="this.onerror=null;this.src='https://4civil.com.au/wp-content/uploads/2021/10/4civiltransmall.png'" />
+          <img class="brand-logo" src="https://4civil.com.au/wp-content/uploads/2021/10/4civiltransmall.png" alt="4 Civil Solutions" width="300" height="110" />
         </a>
         <nav class="nav" id="nav">
           <a href="work.html" class="${page === "work" ? "active" : ""}">Work</a>
@@ -25,9 +25,21 @@
   `;
 
   const footer = `
+    <section class="network-band" aria-label="Victorian networks">
+      <div class="network-inner">
+        <div class="network-kicker">Victorian networks</div>
+        <div class="network-row">
+          <img src="https://4civil.com.au/wp-content/uploads/2021/10/citywide-1.png" alt="Citywide" />
+          <img src="https://4civil.com.au/wp-content/uploads/2021/10/citipower.png" alt="CitiPower" />
+          <img src="https://4civil.com.au/wp-content/uploads/2021/10/powercor.png" alt="Powercor Australia" />
+          <img src="https://4civil.com.au/wp-content/uploads/2021/10/spausnet.png" alt="SP AusNet" />
+          <img src="https://4civil.com.au/wp-content/uploads/2021/10/jemena.png" alt="Jemena" />
+        </div>
+      </div>
+    </section>
     <footer class="site-footer">
       <a class="footer-brand" href="index.html" aria-label="4 Civil Solutions">
-        <img class="footer-logo" src="images/logo.png" alt="4 Civil Solutions" width="300" height="110" onerror="this.onerror=null;this.src='https://4civil.com.au/wp-content/uploads/2021/10/4civiltransmall.png'" />
+        <img class="footer-logo" src="https://4civil.com.au/wp-content/uploads/2021/10/4civiltransmall.png" alt="4 Civil Solutions" width="300" height="110" />
       </a>
       <div>© ${new Date().getFullYear()} 4 Civil Solutions. Australian owned.</div>
       <div><a href="tel:+61407818918">${phone}</a> &nbsp;·&nbsp; <a href="mailto:${email}">${email}</a></div>
